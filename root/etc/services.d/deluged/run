@@ -6,5 +6,5 @@ UMASK_SET=${UMASK_SET:-022}
 umask "$UMASK_SET"
 
 exec \
-	s6-setuidgid abc /usr/bin/deluged -c /config \
+	s6-setuidgid abc /usr/local/bin/deluged -c /config \
 	-d --loglevel=${DELUGE_LOGLEVEL} -l /config/deluged.log
